@@ -1,0 +1,192 @@
+div{
+    /* border: 1px solid; */
+}
+
+.product-container {
+    display: grid;
+    /* grid-template-columns: minmax(180px,auto) 400px; */
+    grid-template-columns: minmax(300px,1fr) minmax(250px,300px);
+    grid-template-rows: 50px 1fr;
+    grid-gap: 3px;
+    height: 100vh;
+}
+
+.header{
+    grid-column: 1/ -1;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.menu{
+    grid-row: 2 / -1; 
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+.main{
+    grid-row: 2/ -1;
+    grid-column: 1;
+}
+
+
+
+.purchase_menu{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(80px,1fr));
+}
+
+.select{
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    justify-content:space-between;
+}
+
+.add_to_bag{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+}
+
+.favourite{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    
+}
+.size {
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2,minmax(5em,1fr)) ;
+    /* padding: 10px; */
+    /* margin: 10px; */
+    margin: 5px;
+}
+
+.main div{
+    background-color: #eaeeef;
+    margin: 1px;
+}
+
+#product-image1, #product-image2, #product-image3, #product-image4{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+.size button{
+    margin: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.size button:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid;
+    margin: 4px;
+
+}
+
+.add_to_bag button{
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.add_to_bag{
+    height: 60px;
+}
+
+.favourite{
+    height: 60px;
+}
+
+.add_to_bag button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(114, 30, 139);
+    margin: 9px;
+    border: 1px solid rgb(52, 20, 85);
+}
+
+
+.favourite button{
+    margin: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.favourite button:hover{
+    background-color: rgb(230, 218, 225);
+}
+
+.select{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+
+
+@media screen and (max-width: 600px){
+    .product-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+}
+
+
+@media screen and (max-width: 400px){
+    .product-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header .header_contents{
+        display: flex;
+        flex-direction: column;
+    }
+}
